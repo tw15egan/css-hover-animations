@@ -1,0 +1,7 @@
+@mixin transform($property, $amount) {
+  transform: unquote("#{$property}(#{$amount})");
+}
+
+@mixin animate($name, $duration:1s, $repeat:infinite, $delay:none, $timing:ease-in-out) {
+  animation: $name $duration $repeat $delay $timing ;
+}
