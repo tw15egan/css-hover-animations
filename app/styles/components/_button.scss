@@ -1,5 +1,5 @@
 .button {
-  background-color: color(gray-20);
+  background-color: color(gray-30);
   color: color(white);
   display: flex;
   align-items: center;
@@ -31,7 +31,18 @@
 
 .pulse-grow {
   &:hover {
-    @include animate(pulse);
-    @include transform(scale, 1.1);
+    @include animate(pulse-grow);
+  }
+}
+
+.pulse-shrink {
+  &:hover {
+    @include animate(pulse-shrink);
+  }
+}
+
+.push {
+  &:hover {
+    @include animate(push, .3s, 1);
   }
 }

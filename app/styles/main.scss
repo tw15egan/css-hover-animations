@@ -16,11 +16,11 @@ body {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background-color: color(blue-40);
   font-family: $font-family-primary;
   color: #333;
-
-
+  background: linear-gradient(180deg, color(blue-40),
+  color(blue-30),
+  color(blue-20));
 }
 
 .browserupgrade {
