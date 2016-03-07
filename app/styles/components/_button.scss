@@ -1,5 +1,7 @@
 .button {
   background-color: color(gray-30);
+  background-size: 100% 100px;
+  background-position: bottom center;
   color: color(white);
   display: flex;
   align-items: center;
@@ -9,6 +11,10 @@
   padding: ($padding / 2) $padding;
   margin: $margin / 2 $margin $margin /2 0;
   border-radius: 4px;
+
+  &:hover {
+    background-color: color(gray-20);
+  }
 }
 
 .grow {
@@ -44,5 +50,37 @@
 .push {
   &:hover {
     @include animate(push, .3s, 1);
+  }
+}
+
+.pop {
+  &:hover {
+    @include animate(pop, .3s, 1);
+  }
+}
+
+.bounce-in {
+  &:hover {
+    @include transform(scale, 1.2);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  }
+}
+
+.bounce-out {
+  &:hover {
+    @include transform(scale, 0.8);
+    transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  }
+}
+
+.rotate {
+  &:hover {
+    @include transform(rotate, 5deg);
+  }
+}
+
+.grow-rotate {
+  &:hover {
+    @include transform-two(rotate, 5deg, scale, 1.2);
   }
 }
